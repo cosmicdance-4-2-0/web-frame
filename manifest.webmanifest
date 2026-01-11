@@ -1,0 +1,16 @@
+{
+  "name": "Minimal Modular Site",
+  "short_name": "ModSite",
+  "start_url": "/# /home",
+  "display": "standalone",
+  "background_color": "#0f0f12",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+  // TODO: Add PNG icons (192/512), because many platforms require raster icons
+}
