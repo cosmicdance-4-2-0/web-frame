@@ -1,0 +1,6 @@
+# TODO: Decide indexing policy, because not all sites should be crawled
+User-agent: *
+Allow: /
+
+# TODO: Update sitemap URL, because crawlers use it for discovery
+Sitemap: /sitemap.xml
