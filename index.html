@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- TODO: Confirm language/locale variants, because SEO + accessibility depend on correct lang tags -->
+  <meta charset="utf-8" />
+  <!-- TODO: Decide viewport scaling policy, because it affects accessibility (zoom) on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- TODO: Write final site description, because this is used for previews/search snippets -->
+  <meta name="description" content="A minimal, modular, standards-compliant website scaffold." />
+  <!-- TODO: Add keywords only if truly useful, because keyword meta is mostly ignored and can be spammy -->
+  <meta name="keywords" content="modular, vanilla js, standards, cloudflare pages" />
+  <!-- TODO: Update author metadata, because attribution/provenance matters long-term -->
+  <meta name="author" content="Christopher 'Kisuul' Lohman" />
+
+  <!-- TODO: Pick canonical URL, because it helps avoid duplicate-index issues -->
+  <link rel="canonical" href="/" />
+
+  <!-- TODO: Add OpenGraph/Twitter metadata, because social sharing previews need it -->
+  <meta property="og:title" content="Minimal Modular Site" />
+  <meta property="og:description" content="A clean vanilla scaffold with modules, routing, and theming." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/og-image.svg" />
+
+  <!-- TODO: Provide real favicons (PNG sizes), because some platforms won’t use SVG -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- TODO: Decide if you want PWA behavior, because it affects caching + update UX -->
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <!-- TODO: Choose theme-color(s), because mobile UI chrome uses this -->
+  <meta name="theme-color" content="#111111" />
+  <!-- TODO: Confirm color-scheme support strategy, because it affects form controls and UA styling -->
+  <meta name="color-scheme" content="dark light" />
+
+  <title>Minimal Modular Site</title>
+
+  <!-- TODO: Consider critical CSS inlining, because it can improve first paint for slow connections -->
+  <link rel="stylesheet" href="/styles/theme.css" />
+  <link rel="stylesheet" href="/styles/base.css" />
+</head>
+
+<body>
+  <!-- TODO: Keep skip link first, because keyboard users need it immediately -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <!-- TODO: Replace placeholder branding, because site identity should be consistent across pages -->
+      <a class="brand" href="#/home" aria-label="Go to home">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span class="brand-text">Minimal Modular</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <!-- TODO: Keep nav small, because excessive top-level links reduce clarity -->
+        <a class="nav-link" href="#/home">Home</a>
+        <a class="nav-link" href="#/about">About</a>
+        <a class="nav-link" href="#/status">Status</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- TODO: Decide whether to keep theme toggle, because it adds state + UX complexity -->
+        <button id="themeToggle" class="btn" type="button">
+          Toggle theme
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="site-main" tabindex="-1">
+    <div class="container">
+      <!-- TODO: Keep a single root mount node, because modular routing/components depend on it -->
+      <section id="app" aria-live="polite">
+        <!-- TODO: Provide a better skeleton loader, because perceived performance matters -->
+        <p class="muted">Loading…</p>
+      </section>
+
+      <noscript>
+        <!-- TODO: Decide whether to support no-JS rendering, because it changes architecture -->
+        <p>This site requires JavaScript for routing and UI.</p>
+      </noscript>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <!-- TODO: Replace placeholder footer text, because legal/contact info may be required -->
+      <small class="muted">© <span id="year"></span> Minimal Modular</small>
+      <a class="muted" href="#/about">Docs</a>
+    </div>
+  </footer>
+
+  <!-- TODO: Keep script at end, because it avoids blocking initial render -->
+  <script type="module" src="/scripts/main.js"></script>
+</body>
+</html>
