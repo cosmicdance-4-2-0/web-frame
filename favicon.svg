@@ -1,0 +1,5 @@
+<!-- TODO: Replace placeholder icon, because brand identity matters -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#8b5cf6"/>
+  <path d="M64 18L92 64L64 110L36 64Z" fill="#0f0f12"/>
+</svg>
