@@ -17,4 +17,8 @@ RTFM!
 Understood?
 
 -- Christopher 'Kisuul' Lohman
-MMS v2026-1.0 - ©1-10-2026
+
+
+MMS v2026-1.0 
+- 
+1-10-2026
