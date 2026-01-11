@@ -1,0 +1,150 @@
+/* TODO: Keep reset minimal, because heavy resets can fight browser defaults unnecessarily */
+*,
+*::before,
+*::after{ box-sizing:border-box; }
+
+html, body{ height:100%; }
+
+body{
+  /* TODO: Consider font loading strategy, because custom fonts can cause CLS/FOIT */
+  font-family: var(--font);
+  margin:0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* TODO: Ensure focus is obvious, because keyboard navigation depends on it */
+:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+a{ color: inherit; }
+a:hover{ text-decoration: underline; }
+
+/* TODO: Provide a container utility, because consistent horizontal padding matters */
+.container{
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 0 var(--s2);
+}
+
+.skip-link{
+  /* TODO: Keep skip link visible on focus, because it’s an accessibility requirement */
+  position: absolute;
+  left: -9999px;
+  top: var(--s2);
+  padding: var(--s0) var(--s2);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r1);
+  z-index: 9999;
+}
+.skip-link:focus{
+  left: var(--s2);
+}
+
+.site-header{
+  /* TODO: Decide header behavior (sticky vs static), because it affects layout and usability */
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in oklab, var(--bg) 70%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.header-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: var(--s2);
+  padding: var(--s2) 0;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap: var(--s1);
+  text-decoration:none;
+}
+.brand-mark{
+  display:inline-grid;
+  place-items:center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--r1);
+  background: color-mix(in oklab, var(--accent) 18%, var(--surface));
+  border: 1px solid var(--border);
+}
+.brand-text{ font-weight: 650; letter-spacing: .2px; }
+
+.nav{
+  display:flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+}
+.nav-link{
+  text-decoration:none;
+  padding: .35rem .6rem;
+  border-radius: var(--r1);
+}
+.nav-link[aria-current="page"]{
+  background: color-mix(in oklab, var(--accent) 16%, var(--surface));
+  border: 1px solid var(--border);
+}
+
+.header-actions{ display:flex; gap: var(--s1); }
+
+.site-main{
+  padding: var(--s4) 0;
+}
+
+.site-footer{
+  border-top: 1px solid var(--border);
+  padding: var(--s3) 0;
+}
+.footer-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: var(--s2);
+  flex-wrap: wrap;
+}
+
+.card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  box-shadow: var(--shadow);
+  padding: var(--s3);
+}
+
+.btn{
+  /* TODO: Add button variants (primary/ghost), because you’ll want consistent UI primitives */
+  appearance: none;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--surface) 92%, transparent);
+  color: var(--text);
+  padding: .55rem .9rem;
+  border-radius: var(--r1);
+  cursor: pointer;
+}
+.btn:hover{
+  background: color-mix(in oklab, var(--surface) 82%, var(--accent) 10%);
+}
+.btn:active{
+  transform: translateY(1px);
+}
+
+.muted{ color: var(--muted); }
+
+.grid{
+  /* TODO: Provide more layout utilities only as needed, because utility bloat is real */
+  display:grid;
+  gap: var(--s2);
+}
+
+@media (min-width: 720px){
+  .grid.cols-2{ grid-template-columns: 1fr 1fr; }
+}
