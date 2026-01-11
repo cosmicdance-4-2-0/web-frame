@@ -1,0 +1,8 @@
+# TODO: Tune security headers for your needs, because overly strict CSP can break legitimate scripts
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  # TODO: Add a Content-Security-Policy, because CSP is your best XSS seatbelt (but requires careful tuning)
