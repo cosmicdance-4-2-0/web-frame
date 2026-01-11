@@ -1,0 +1,45 @@
+/* TODO: Decide your design tokens, because consistent variables reduce future refactor pain */
+:root{
+  /* TODO: Pick a real palette, because placeholder colors won’t match your brand */
+  --bg: #0f0f12;
+  --surface: #16161b;
+  --text: #f2f2f7;
+  --muted: rgba(242,242,247,.72);
+  --border: rgba(242,242,247,.14);
+  --accent: #8b5cf6;
+
+  /* TODO: Confirm typography choices, because font metrics affect layout */
+  --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* TODO: Tune spacing scale, because consistent rhythm prevents UI clutter */
+  --s-1: .25rem;
+  --s0: .5rem;
+  --s1: .75rem;
+  --s2: 1rem;
+  --s3: 1.5rem;
+  --s4: 2rem;
+
+  /* TODO: Confirm radius/shadow style, because it defines overall visual character */
+  --r1: 10px;
+  --r2: 16px;
+  --shadow: 0 8px 24px rgba(0,0,0,.35);
+
+  /* TODO: Set content width, because readability depends on line length */
+  --content: 980px;
+
+  /* TODO: Ensure UA widgets follow scheme, because it improves native control styling */
+  color-scheme: dark light;
+}
+
+/* TODO: Add explicit light theme tokens, because some users prefer it regardless of OS */
+[data-theme="light"]{
+  --bg: #f7f7fb;
+  --surface: #ffffff;
+  --text: #121218;
+  --muted: rgba(18,18,24,.72);
+  --border: rgba(18,18,24,.12);
+  --accent: #6d28d9;
+
+  /* TODO: Re-tune shadow in light mode, because dark shadows can look dirty */
+  --shadow: 0 10px 24px rgba(0,0,0,.12);
+}
