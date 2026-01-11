@@ -1,7 +1,7 @@
 {
   "name": "Minimal Modular Site",
   "short_name": "ModSite",
-  "start_url": "/# /home",
+  "start_url": "/#/home",
   "display": "standalone",
   "background_color": "#0f0f12",
   "theme_color": "#111111",
